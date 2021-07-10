@@ -1,6 +1,6 @@
 # Modelo LaTeX para a elaboração de Memorial Circunstanciado
 
-Modelo para elaboração de Memorial circunstanciado, documento exigito para a parttipação em processos de seleção de vagas para docentes do Ensino Superior.
+Modelo para elaboração de Memorial circunstanciado, documento exigido para a participação em processos de seleção de vagas para docentes do Ensino Superior.
 
 Alterações e melhorias serão efetuadas conforme necessidade.
 
