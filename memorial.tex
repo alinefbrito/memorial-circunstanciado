@@ -63,9 +63,37 @@
 \newcommand{\Title}{Memorial Circunstanciado}
 \newcommand{\Author}{Nome Completo Autor}
 \newcommand{\Subject}{Memorial Circunstanciado e documentação comprobatória solicitados como requisitos para participação no objetivo do documento. }
-\newcommand{\SubItem}[1]{
-    {\setlength\itemindent{15pt} \item[-] #1}}
+\newcommand{\SubItemB}[2]{
+    {\setlength\itemindent{15pt} \item[-] \textbf{#1} {#2}}}
+    
+   
+    \newcommand{\SubItemBB}[1]{
+    {\setlength\itemindent{15pt} \item[-] \textbf{Escola: } #1}}
 
+\newcommand{\Instituicao}[1]{
+    {\setlength\itemindent{15pt} \item[-] {\textbf{Instituição$:$} #1}}}
+    
+\newcommand{\Conclusao}[1]{
+    {\setlength\itemindent{15pt} \item[-] \textbf{Conclusão $:$} {#1}}}
+    
+  \newcommand{\RegDiploma}[1]{
+    {\setlength\itemindent{15pt} \item[-] \textbf{N\degree de Registro do $:$} {#1}}}
+
+   \newcommand{\Duracao}[1]{
+    {\setlength\itemindent{15pt} \item[-] \textbf{N\degree  Horas:} {#1}}}   
+    
+   \newcommand{\DiscSup}[1]{
+    {\setlength\itemindent{15pt} \item[-] \textbf{Disciplinas Ensino Superior:} {#1}}}      
+    
+     \newcommand{\DiscMedio}[1]{
+    {\setlength\itemindent{15pt} \item[-] \textbf{Disciplinas Ensino Médio:} {#1}}} 
+    
+       \newcommand{\Periodo}[2]{
+    {\setlength\itemindent{15pt} \item[-] \textbf{Período:} #1 à #2} }
+    
+    
+    \newcommand{\desc}[2]{ \item[-] \textcolor{red}{\textbf{#1}}~\emph{#2}}
+    
 \usepackage[bookmarks,colorlinks,pdfpagelabels,
 pdftitle={\Title}, pdfauthor={\Author},
 pdfsubject={ \Subject }, pdfcreator={\Author}, pdfkeywords={    Docente}]{hyperref}
@@ -216,32 +244,36 @@ Informações adicionais que o candidato julgar necessário
 
     \item \textbf{Pós-doutorado }(anexo: comprovante n\degree \ref{reviewer:2015-sbcars} )
     \item \textbf{ Doutorado na área do concurso - título (ex: Doutorado em....; citar curso e área de concentração)  }(anexo: comprovante  n\degree \ref{reviewer:2015-sbcars})
-        \SubItem instituição 
-        \SubItem data de obtenção do título
+       \Instituicao Nome Instituição
+        \Conclusao 2021
+        \RegDiploma 2002
     \item \textbf{Doutorado em outra área - título (ex: Doutorado em....; citar curso e área de concentração)} (anexo: comprovante  n\degree \ref{reviewer:2015-sbcars})
-        \SubItem instituição 
-        \SubItem data de obtenção do título
+       \SubItemB{Instituição: }{Nome Instituição} 
+        \SubItemB{Ano de conclusão : }{xxxx}
+        \SubItemB{N\degree de Registro do Diploma}{ nro}
     \item \textbf{Mestrado na área do concurso - título (ex: Mestrado em....; citar curso e área de concentração)} (anexo: comprovante  n\degree \ref{reviewer:2015-sbcars}) 
-        \SubItem instituição 
-        \SubItem data de obtenção do título
+       \SubItemB[Instituição: ]{Nome Instituição} 
+        \SubItemB[Ano de conclusão : ]{xxxx}
+        \SubItemB[N\degree de Registro do Diploma]{ nro}
     \item \textbf{Mestrado em outra área - título (ex: Mestrado em....; citar curso e área de concentração) }(anexo: comprovante  n\degree \ref{reviewer:2015-sbcars})
-        \SubItem instituição 
-        \SubItem data de obtenção do título
+       \SubItemB{Instituição: }{Nome Instituição} 
+        \SubItemB{Ano de conclusão : }{xxxx}
+        \SubItemB{N\degree de Registro do Diploma}{ nro}
     \item \textbf{Especialização na área do concurso - título (ex: Bacharel em Direito, Ciência da Computação, Letras, etc.; Engenheiro Civil, 
 Mecânico; etc.; Tecnólogo em Processamento de Dados, Construção Civil, etc) } (anexo: comprovante  n\degree \ref{reviewer:2015-sbcars})
-        \SubItem instituição 
-        \SubItem  ano de conclusão 
-        \SubItem número do registro do diploma  
+       \SubItemB{Instituição: }{Nome Instituição} 
+        \SubItemB{Ano de conclusão : }{xxxx}
+        \SubItemB{N\degree de Registro do Diploma}{ nro} 
     \item \textbf{Especialização em outra área - título (ex: Bacharel em Direito, Ciência da Computação, Letras, etc.; Engenheiro Civil, 
 Mecânico; etc.; Tecnólogo em Processamento de Dados, Construção Civil, etc) }(anexo: comprovante  n\degree \ref{reviewer:2015-sbcars})
-        \SubItem instituição 
-        \SubItem  ano de conclusão
-        \SubItem número do registro do diploma
+        \SubItemB{Instituição: }{Nome Instituição} 
+        \SubItemB{Ano de conclusão : }{xxxx}
+        \SubItemB{N\degree de Registro do Diploma}{ nro}
     \item \textbf{Graduação na área do concurso- título (ex: Bacharel em Direito, Ciência da Computação, Letras, etc.; Engenheiro Civil, 
 Mecânico; etc.; Tecnólogo em Processamento de Dados, Construção Civil, etc) } (anexo: comprovante  n\degree \ref{reviewer:2015-sbcars})
-        \SubItem instituição 
-        \SubItem  ano de conclusão 
-        \SubItem número do registro do diploma
+        \SubItemB{Instituição: }{Nome Instituição} 
+        \SubItemB{Ano de conclusão : }{xxxx}
+        \SubItemB{N\degree de Registro do Diploma}{ nro}
 \end{enumerate}
 
 \subsection{Formação Complementar}
@@ -249,10 +281,10 @@ Mecânico; etc.; Tecnólogo em Processamento de Dados, Construção Civil, etc) 
 \begin{enumerate}
 \renewcommand{\labelenumi}{{\large\bfseries\arabic{enumi}.}}
     \item \textbf{nome do curso} (anexo: comprovante n\degree \ref{reviewer:2015-sbcars})
-        \SubItem instituição 
-        \SubItem nº de horas-aula 
-        \SubItem nota de aproveitamento 
-        \SubItem período ou data 
+        \Instituicao nome 
+        \Duracao num horas 
+        \SubItemB nota de aproveitamento 
+        \Periodo{inicio}{fim} 
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -264,9 +296,9 @@ Mecânico; etc.; Tecnólogo em Processamento de Dados, Construção Civil, etc) 
 
 \begin{enumerate}
     \item \textbf{Instituição: } (anexo: comprovante n\degree \ref{reviewer:2015-sbcars} )
-        \SubItem Disciplinas Ensino Superior:
-        \SubItem Disciplinas Ensino Médio:
-        \SubItem Período:  
+        \SubItemB Disciplinas Ensino Superior:
+        \SubItemB Disciplinas Ensino Médio:
+        \SubItemB Período:  
 \end{enumerate}
 
 
@@ -514,8 +546,8 @@ Mecânico; etc.; Tecnólogo em Processamento de Dados, Construção Civil, etc) 
 \vspace{0.3cm}
 
 \item   \textbf{Descrição:}  Participação na Comissão Avaliadora dos trabalhos na área de Ciências Exatas da 19ª Jornada de Iniciação Científica da FACEPE [Doc. \ref{app:2015-jic-facepe}]
-    \SubItem  Instituição: Fundação de Amparo a Ciência e Tecnologia do Estado de Pernambuco 
-     \SubItem Data/Período: 09 a 12 de Junho de 2015
+    \SubItemB  Instituição: Fundação de Amparo a Ciência e Tecnologia do Estado de Pernambuco 
+     \SubItemB Data/Período: 09 a 12 de Junho de 2015
 \end{enumerate}
 
 %------------------------------------------------------------------------------
@@ -528,10 +560,10 @@ Mecânico; etc.; Tecnólogo em Processamento de Dados, Construção Civil, etc) 
 \vspace{0.3cm}
 
 \item       \textbf{Aluno:} José Welington de Almeida Filho [Doc. \ref{app:bancas-tcc}]
-    \SubItem  Título da Monografia: Uma proposta de uso de Gamification para o ensino de software.
-    \SubItem  Curso: Graduação em Ciência da Computação\\
-           \SubItem Universidade: Universidade Federal de Pernambuco (UFPE)
-           \SubItem  Data: 28 de Julho de 2015\\
+    \SubItemBB  Título da Monografia: Uma proposta de uso de Gamification para o ensino de software.
+    \SubItemB  Curso: Graduação em Ciência da Computação\\
+           \SubItemB Universidade: Universidade Federal de Pernambuco (UFPE)
+           \SubItemB  Data: 28 de Julho de 2015\\
 
 \end{enumerate}
 
